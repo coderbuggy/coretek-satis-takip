@@ -58,10 +58,10 @@ function Header() {
             letterSpacing: "1px",
           }}
         >
-          Kupa Bilişim | Satış Takip Programı
+          Kupa Bilişim | DMO
         </Typography>
         <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-          {["/teklifler", "/cariler"].map((route, index) => (
+          {["/", "/teklifler", "/cariler"].map((route, index) => (
             <Button
               key={index}
               onClick={() => navigate(route)}
@@ -82,6 +82,8 @@ function Header() {
                 ? "Teklifler"
                 : route === "/cariler"
                 ? "Cariler"
+                : route === "/"
+                ? "Anasayfa"
                 : "İşlemler"}
             </Button>
           ))}

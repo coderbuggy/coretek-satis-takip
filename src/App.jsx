@@ -19,6 +19,7 @@ import Ayarlar from "./pages/Ayarlar";
 import Risturn from "./pages/Risturn";
 import Kullanicilar from "./pages/Kullanicilar";
 import TeklifEkle from "./pages/TeklifEkle";
+import TeklifDuzenle from "./pages/TeklifDuzenle";
 
 const App = () => {
   return (
@@ -42,6 +43,8 @@ const AppContent = () => {
               <Route path="/" element={<Anasayfa />} />
               <Route path="/islemler" element={<Islemler />} />
               <Route path="/teklifler" element={<Teklifler />} />
+              <Route path="/teklif-ekle" element={<TeklifEkle />} />
+              <Route path="/teklif-duzenle/:id" element={<TeklifDuzenle />} />
               <Route path="/cariler" element={<Cariler />} />
               <Route path="/urunler" element={<Urunler />} />
               <Route path="/doviz" element={<Doviz />} />
@@ -49,7 +52,6 @@ const AppContent = () => {
               <Route path="/ayarlar" element={<Ayarlar />} />
               <Route path="/risturn" element={<Risturn />} />
               <Route path="/kullanicilar" element={<Kullanicilar />} />
-              <Route path="/teklif-ekle" element={<TeklifEkle />} />
             </Route>
 
             <Route path="/login" element={<Login />} />

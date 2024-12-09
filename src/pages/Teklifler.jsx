@@ -33,7 +33,7 @@ const initialOffers = [
     kdv: 180,
     toplamTutar: 1180,
     kar: 200,
-    durum: "yeni",
+    durum: "Yeni",
     onaylanmamis: true,
   },
   {
@@ -47,7 +47,7 @@ const initialOffers = [
     kdv: 360,
     toplamTutar: 2360,
     kar: 500,
-    durum: "kazanıldı",
+    durum: "Kazanıldı",
     onaylanmamis: false,
   },
   {
@@ -61,7 +61,7 @@ const initialOffers = [
     kdv: 90,
     toplamTutar: 590,
     kar: 100,
-    durum: "kaybedildi",
+    durum: "Kaybedildi",
     onaylanmamis: true,
   },
   {
@@ -75,7 +75,7 @@ const initialOffers = [
     kdv: 540,
     toplamTutar: 3540,
     kar: 700,
-    durum: "iptal edildi",
+    durum: "İptal edildi",
     onaylanmamis: false,
   },
 ];
@@ -98,7 +98,7 @@ function getComparator(order, orderBy) {
 }
 
 const Teklifler = () => {
-  const [offers, setOffers] = useState(initialOffers);
+  const [offers] = useState(initialOffers);
 
   // Filtre state'leri
   const [durum, setDurum] = useState("tümü");
@@ -285,7 +285,10 @@ const Teklifler = () => {
                 }}
               >
                 <TableCell>
-                  <IconButton sx={{ color: "#d32f2f" }}>
+                  <IconButton
+                    sx={{ color: "#d32f2f" }}
+                    onClick={() => navigate(`/teklif-duzenle/${offer.id}`)}
+                  >
                     <HiOutlinePencilSquare size={18} />
                   </IconButton>
                 </TableCell>
