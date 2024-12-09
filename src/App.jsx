@@ -18,6 +18,7 @@ import Kategoriler from "./pages/Kategoriler";
 import Ayarlar from "./pages/Ayarlar";
 import Risturn from "./pages/Risturn";
 import Kullanicilar from "./pages/Kullanicilar";
+import TeklifEkle from "./pages/TeklifEkle";
 
 const App = () => {
   return (
@@ -48,6 +49,7 @@ const AppContent = () => {
               <Route path="/ayarlar" element={<Ayarlar />} />
               <Route path="/risturn" element={<Risturn />} />
               <Route path="/kullanicilar" element={<Kullanicilar />} />
+              <Route path="/teklif-ekle" element={<TeklifEkle />} />
             </Route>
 
             <Route path="/login" element={<Login />} />
