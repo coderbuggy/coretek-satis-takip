@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { HiPlusCircle } from "react-icons/hi";
 import { MdEdit } from "react-icons/md";
-import CariEkleModal from "../modals/CariEkleModal";
+import CariModal from "../modals/CariModal";
 
 function Cariler() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -77,7 +77,7 @@ function Cariler() {
           marginBottom: 3,
         }}
       >
-        <Typography variant="h4" sx={{ fontWeight: "bold", color: "#d32f2f" }}>
+        <Typography variant="h4" sx={{ marginBottom: 3, color: "#d32f2f" }}>
           Cariler
         </Typography>
         <Button
@@ -145,7 +145,7 @@ function Cariler() {
       </TableContainer>
 
       {/* Cari Ekle Modal */}
-      <CariEkleModal
+      <CariModal
         open={isModalOpen}
         handleClose={handleModalClose}
         onSave={handleSave}

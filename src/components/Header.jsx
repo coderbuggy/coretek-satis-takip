@@ -61,7 +61,7 @@ function Header() {
           Kupa Bilişim | Satış Takip Programı
         </Typography>
         <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-          {["/teklifler", "/cariler", "/islemler"].map((route, index) => (
+          {["/teklifler", "/cariler"].map((route, index) => (
             <Button
               key={index}
               onClick={() => navigate(route)}

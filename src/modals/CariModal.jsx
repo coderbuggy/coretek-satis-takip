@@ -11,16 +11,18 @@ import { HiMiniXMark } from "react-icons/hi2";
 
 import { useForm } from "react-hook-form";
 
-const CariEkleModal = ({ open, handleClose, onSave, initialData }) => {
+const CariModal = ({ open, handleClose, onSave, initialData }) => {
   const { register, handleSubmit, reset } = useForm();
 
   useEffect(() => {
-    if (initialData) {
-      reset(initialData);
-    } else {
+    if (open && !initialData) {
+      // Modal açıldığında ve initialData yoksa formu sıfırla
       reset();
+    } else if (initialData) {
+      // initialData varsa formu doldur
+      reset(initialData);
     }
-  }, [initialData, reset]);
+  }, [open, initialData, reset]);
 
   const onSubmit = (data) => {
     onSave(data);
@@ -101,4 +103,4 @@ const CariEkleModal = ({ open, handleClose, onSave, initialData }) => {
   );
 };
 
-export default CariEkleModal;
+export default CariModal;

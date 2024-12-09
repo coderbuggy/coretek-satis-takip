@@ -23,6 +23,7 @@ const Login = () => {
         height: "100%",
         display: "flex",
         justifyContent: "center",
+        borderRadius: "16px",
         alignItems: "center",
         background: "linear-gradient(135deg, #d2d1d1 0%, #ce6767 100%)",
         position: "relative",
